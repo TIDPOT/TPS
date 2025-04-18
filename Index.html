@@ -43,7 +43,11 @@
 <body>
     <main>
         <div class="iframe-container">
-            <iframe id="mapFrame" src="https://script.google.com/macros/s/AKfycbwk9vCq7TlTnnQt3MYR2CreHz1ZAU0AWjAQHqb7MFYBvKqCJSI-xeoEDQ79fGmov0zX8A/exec"></iframe>
+            <iframe id="mapFrame" 
+    src="https://script.google.com/macros/s/AKfycbwk9vCq7TlTnnQt3MYR2CreHz1ZAU0AWjAQHqb7MFYBvKqCJSI-xeoEDQ79fGmov0zX8A/exec"
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+    allow="fullscreen"
+    referrerpolicy="no-referrer"></iframe>
         </div>
         <div class="controls">
             <button onclick="toggleFullscreen()">全螢幕</button>
