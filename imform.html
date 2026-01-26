@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抽水站基本資料</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    h3 {
+      margin: 0;
+      padding: 10px;
+      background-color: #2a74ff;
+      color: white;
+      text-align: center;
+    }
+    .iframe-container {
+      flex: 1;
+      padding: 5px;
+    }
+    iframe {
+      width: 100%;
+      height: 98%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h3>抽水站基本資料</h3>
+    <div class="iframe-container">
+      <iframe id="mapFrame" src="https://script.google.com/macros/s/AKfycbxY73cndV4H5wLEzXbLh0TUmjoogIVlMnQFASLR8lglH82AfIfT_vVP6pWUaZ4OztOy/exec" frameborder="0"></iframe>
+    </div>
+  </main>
+
+  <script>
+    function toggleFullscreen() {
+      var elem = document.getElementById('mapFrame');
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+          elem.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+          document.msExitFullscreen();
+        }
+      }
+    }
+  </script>
+</body>
+</html>
