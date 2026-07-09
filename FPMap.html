@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防汛地圖</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* 隱藏捲軸，確保全螢幕體驗 */
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      display: block; /* 移除 iframe 預設的底部間隙 */
+    }
+  </style>
+</head>
+<body>
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbymHDib7-_CKxaAbL47KPsiDo6dayxHdwxWYbn1URBMykLkdYnz5ANo4wZg2JjEfYGghQ/exec" 
+    frameborder="0" 
+    allow="geolocation *; camera; microphone; accelerometer; gyroscope"
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation">
+  </iframe>
+</body>
+</html>
