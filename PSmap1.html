@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>地圖</title>
+  <title>防汛地圖</title>
   <style>
     html, body {
       margin: 0;
@@ -13,15 +13,21 @@
     }
     iframe {
       width: 100%;
-      height: 100vh;
+      height: 100%; /* 預設桌面用滿版 */
       border: none;
       display: block; /* 移除 iframe 預設的底部間隙 */
+    }
+    /* 手機裝置 (螢幕寬度小於768px) */
+    @media (max-width: 768px) {
+      iframe {
+        height: 90vh; /* 手機用 90vh，避免超出螢幕 */
+      }
     }
   </style>
 </head>
 <body>
   <iframe 
-    src="https://script.google.com/macros/s/AKfycbzERWivGtSDOFSoEcJ4KrzDQGai_Z-nVbLnuDJls5zOqWrAUM_lEhvddCzWFw3KyPE7/exec" 
+    src="https://script.google.com/macros/s/AKfycbymHDib7-_CKxaAbL47KPsiDo6dayxHdwxWYbn1URBMykLkdYnz5ANo4wZg2JjEfYGghQ/exec" 
     frameborder="0" 
     allow="geolocation *; camera; microphone; accelerometer; gyroscope"
     sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation">
